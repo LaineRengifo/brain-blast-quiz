@@ -203,6 +203,13 @@ body.light .option-grid {
 .wrong { background: #E74C3C !important; }
 .disabled { pointer-events: none; opacity: 0.7; }
 
+.logo {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+    margin-bottom: 0.5rem;
+}
+
 /* Responsive styles */
 @media (max-width: 900px) {
     .container {
