@@ -4,7 +4,7 @@
 **Brain Blast Quiz** is a modern, interactive web application designed to test and expand your knowledge across various topics. Whether you want to challenge yourself or compete with friends, this quiz game offers a fun and engaging way to learn. The project is ideal for anyone interested in trivia, education, or simply looking for an entertaining way to pass the time.
 
 ## What is this project for?
-This project serves as a demonstration of building a responsive, user-friendly quiz application using web technologies. It can be used as:
+This project demonstrates how to build a responsive, user-friendly quiz application using web technologies. It can be used as:
 - A learning tool for students and trivia enthusiasts
 - A template for developers learning front-end web development
 - A foundation for more advanced quiz or educational apps
@@ -15,11 +15,20 @@ This project serves as a demonstration of building a responsive, user-friendly q
 - **JavaScript (ES6+)**: Game logic, interactivity, and API integration
 - **Open Trivia Database API**: Source of quiz questions
 
+## Colors & Fonts
+- **Primary Color:** `#4A90E2`
+- **Secondary Color:** `#50E3C2`
+- **Dark Background:** `#1A1A2E`
+- **Light Background:** `#f5f6fa` to `#e9ecef` (gradient)
+- **Text (Dark):** `#FFFFFF`
+- **Text (Light):** `#22223B`
+- **Font:** `'Poppins', sans-serif`
+
 ## Screenshot
 ![Brain Blast Quiz Screenshot](assets/screenshot.png)
 
 ## Key Features
-- Multiple categories to choose from (General Knowledge, Science & Nature, Sports)
+- Multiple categories to choose from (General Knowledge, Science & Nature, Sports, Geography)
 - 10 random questions per quiz session
 - Instant feedback on answers
 - Score tracking throughout the game
