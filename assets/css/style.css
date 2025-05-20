@@ -93,6 +93,7 @@ body.light .option-grid {
     margin: 0 auto;
     text-align: center;
     padding: 1rem;
+    grid-template-columns: 1fr 1fr;
 }
 
 .header {
@@ -102,7 +103,7 @@ body.light .option-grid {
 
 .category-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr); /* Changed from 3 to 4 */
     gap: 1.5rem;
     margin-bottom: 2rem;
 }
@@ -211,6 +212,14 @@ body.light .option-grid {
 }
 
 /* Responsive styles */
+
+@media screen and (min-width: 1200px) {
+    .category-grid {
+    
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
 @media (max-width: 900px) {
     .container {
         max-width: 98vw;

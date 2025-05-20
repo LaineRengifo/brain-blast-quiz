@@ -7,7 +7,8 @@ class QuizGame {
         this.categories = {
             9: 'General Knowledge',
             17: 'Science & Nature',
-            21: 'Sports'
+            21: 'Sports',
+            22: 'Geography'
         };
 
         this.init();
