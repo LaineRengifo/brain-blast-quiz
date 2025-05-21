@@ -15,21 +15,27 @@ class QuizGame {
     }
 
     async init() {
-        this.addEventListeners();
+        this.generateCategories();
         this.hideQuestionContainer();
         this.setupThemeToggle();
         this.setupBackButton();
     }
 
-    addEventListeners() {
-        document.querySelectorAll('.category-card').forEach(card => {
+    generateCategories() {
+        const grid = document.getElementById('categoryGrid');
+        grid.innerHTML = '';
+        Object.entries(this.categories).forEach(([id, name]) => {
+            const card = document.createElement('div');
+            card.className = 'category-card';
+            card.dataset.category = id;
+            card.textContent = name;
             card.addEventListener('click', (e) => this.startGame(e));
+            grid.appendChild(card);
         });
     }
 
     setupThemeToggle() {
         const toggleBtn = document.getElementById('toggleTheme');
-        // Set initial icon
         toggleBtn.textContent = document.body.classList.contains('light') ? '🌞' : '🌙';
         toggleBtn.addEventListener('click', () => {
             document.body.classList.toggle('light');
