@@ -25,8 +25,9 @@ This project demonstrates how to build a responsive, user-friendly quiz applicat
 - **Font:** `'Poppins', sans-serif`
 
 ## Screenshot
-![Brain Blast Quiz Screenshot](assets/screenshot.png)
+![Brain Blast Quiz Screenshot](assets/brain-blast.png)
 
+![Brain Blast Quiz Screenshot Limehouse test](assets/limehouse-test.png.png)
 ## Key Features
 - Multiple categories to choose from (General Knowledge, Science & Nature, Sports, Geography)
 - 10 random questions per quiz session
