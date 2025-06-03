@@ -1,51 +1,126 @@
-# Brain Blast Quiz
+# 🧠 Brain Blast Quiz
 
-## Screenshot
-![Brain Blast Quiz Screenshot](assets/brain-blast.png)
+Brain Blast Quiz is a vibrant, interactive web quiz app that challenges users with fun questions across multiple categories. Designed for learning and entertainment, it features a modern UI, dark/light theme toggle, and smooth animations. Built as a JavaScript project to demonstrate dynamic DOM manipulation, API integration, and responsive design.
 
+---
 
-## Project Introduction
-**Brain Blast Quiz** is a modern, interactive web application designed to test and expand your knowledge across various topics. Whether you want to challenge yourself or compete with friends, this quiz game offers a fun and engaging way to learn. The project is ideal for anyone interested in trivia, education, or simply looking for an entertaining way to pass the time.
+## 🔗 Live Demo
 
-## What is this project for?
-This project demonstrates how to build a responsive, user-friendly quiz application using web technologies. It can be used as:
-- A learning tool for students and trivia enthusiasts
-- A template for developers learning front-end web development
-- A foundation for more advanced quiz or educational apps
+<!-- Replace with your live link if deployed -->
+<!-- [Try Brain Blast Quiz](https://yourusername.github.io/brain-blast-quiz/) -->
 
-## Programming Languages & Technologies Used
-- **HTML5**: Structure of the web pages
-- **CSS3**: Styling, layout, and responsive design (including dark/light themes)
-- **JavaScript (ES6+)**: Game logic, interactivity, and API integration
-- **Open Trivia Database API**: Source of quiz questions
+---
 
-## Colors & Fonts
-- **Primary Color:** `#4A90E2`
-- **Secondary Color:** `#50E3C2`
-- **Dark Background:** `#1A1A2E`
-- **Light Background:** `#f5f6fa` to `#e9ecef` (gradient)
-- **Text (Dark):** `#FFFFFF`
-- **Text (Light):** `#22223B`
-- **Font:** `'Poppins', sans-serif`
+## 📖 Table of Contents
 
+- [Project Overview](#project-overview)
+- [UX/UI Design](#uxui-design)
+- [User Stories](#user-stories)
+- [Colors & Fonts](#colors--fonts)
+- [Features](#features)
+- [Built With](#built-with)
+- [Testing](#testing)
+- [Deployment](#deployment)
+- [Future Features](#future-features)
+- [Known Bugs](#known-bugs)
+- [Citation](#citation)
 
-![Brain Blast Quiz Screenshot Limehouse test](assets/limehouse-test.png)
-## Key Features
-- Multiple categories to choose from (General Knowledge, Science & Nature, Sports, Geography)
-- 10 random questions per quiz session
-- Instant feedback on answers
-- Score tracking throughout the game
+---
+
+## 📌 Project Overview
+
+**Brain Blast Quiz** is a single-page web app that lets users test their knowledge in categories like General Knowledge, Science & Nature, Sports, and Geography. Questions are fetched live from the Open Trivia Database API, ensuring a fresh experience every time.
+
+---
+
+## 🎨 UX/UI Design
+
+- Clean, modern interface with responsive layout
 - Dark and light theme toggle for comfortable viewing
-- Responsive design for mobile, tablet, and desktop
-- Option to return to category selection at any time
+- Animated transitions for feedback and engagement
 
-## Usage Instructions
-1. **Clone or download the repository.**
-2. **Open the project folder in VS Code.**
-3. **Start Live Server** (or open `index.html` directly in your browser).
-4. **Select a category** to begin the quiz.
-5. **Answer the questions** by clicking on the options.
-6. **Switch between dark and light themes** using the 🌙/🌞 button in the top left.
-7. **Return to category selection** at any time using the ⬅ Back button.
+---
 
-Enjoy testing your knowledge and have fun with Brain Blast Quiz!
+## 🛠️ User Stories
+
+As a user, I want to:
+- ✅ Select a quiz category
+- ✅ Answer multiple-choice questions
+- ✅ See instant feedback and my score
+- ✅ Switch between dark and light themes
+- ✅ Return to category selection at any time
+- ✅ Play on mobile, tablet, or desktop
+
+---
+
+## 🎨 Colors & Fonts
+
+| Purpose         | Color/Font                      |
+|-----------------|--------------------------------|
+| Primary         | `#4A90E2`                      |
+| Secondary       | `#50E3C2`                      |
+| Dark Background | `#1A1A2E`                      |
+| Light Background| `#f5f6fa` → `#e9ecef` (gradient)|
+| Text (Dark)     | `#FFFFFF`                      |
+| Text (Light)    | `#22223B`                      |
+| Font            | `'Poppins', sans-serif`        |
+
+---
+
+## 🚀 Features
+
+- Dynamic category and question generation via JavaScript
+- Fetches questions from the Open Trivia Database API
+- Score tracking and progress bar
+- Dark/light theme toggle
+- Responsive design for all devices
+- Back button to return to category selection
+- Animated feedback for correct/wrong answers
+
+---
+
+## 🛠️ Built With
+
+- **HTML5**: Semantic structure
+- **CSS3**: Styling, layout, responsive design, and themes
+- **JavaScript (ES6+)**: Game logic, DOM manipulation, API integration
+- **Open Trivia Database API**: Live quiz questions
+
+---
+
+## ✅ Testing
+
+- Tested on Chrome, Firefox, and mobile browsers
+- Responsive layout verified on various screen sizes
+- Validated with W3C HTML and CSS validators
+- Manual testing for all user stories and features
+
+---
+
+## 🚀 Deployment
+
+- Can be run locally by opening `index.html` in a browser
+- Easily deployable via GitHub Pages or any static hosting
+
+---
+
+## 🔮 Future Features
+
+- 🚀 Add more categories and question types
+- 🚀 High score leaderboard
+- 🚀 Sound effects and more animations
+- 🚀 Persistent theme and score memory
+
+---
+
+## 🐞 Known Bugs
+
+- ❌ Some special characters in questions may not render perfectly (API issue)
+
+---
+
+## 📜 Citation
+
+- [Open Trivia Database API](https://opentdb.com/)
+- [Poppins Font - Google Fonts](https://fonts.google.com/specimen/Poppins)
+- Icons and favicon from [Icons8](https://icons8.com/)

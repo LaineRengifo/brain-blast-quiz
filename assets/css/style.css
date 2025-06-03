@@ -211,6 +211,64 @@ body.light .option-grid {
     margin-bottom: 0.5rem;
 }
 
+/* Modal styles */
+.modal {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(30, 41, 59, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+.modal-content {
+    background: #fff;
+    color: #22223B;
+    border-radius: 18px;
+    padding: 2rem 2.5rem;
+    box-shadow: 0 8px 32px rgba(74,144,226,0.18);
+    text-align: center;
+    max-width: 90vw;
+}
+body.light .modal-content {
+    background: #f8fafc;
+    color: #22223B;
+}
+.modal-content h2 {
+    margin-top: 0;
+    color: var(--primary);
+}
+#closeModalBtn {
+    margin-top: 1.5rem;
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.7rem 2rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+#closeModalBtn:hover {
+    background: var(--secondary);
+}
+
+/* Info button styles */
+.info-btn {
+    margin-bottom: 1.5rem;
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.7rem 2rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.info-btn:hover {
+    background: var(--secondary);
+}
+
 /* Responsive styles */
 @media (max-width: 900px) {
     .container {
