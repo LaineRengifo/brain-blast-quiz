@@ -1,5 +1,9 @@
 # Brain Blast Quiz
 
+## Screenshot
+![Brain Blast Quiz Screenshot](assets/brain-blast.png)
+
+
 ## Project Introduction
 **Brain Blast Quiz** is a modern, interactive web application designed to test and expand your knowledge across various topics. Whether you want to challenge yourself or compete with friends, this quiz game offers a fun and engaging way to learn. The project is ideal for anyone interested in trivia, education, or simply looking for an entertaining way to pass the time.
 
@@ -24,8 +28,6 @@ This project demonstrates how to build a responsive, user-friendly quiz applicat
 - **Text (Light):** `#22223B`
 - **Font:** `'Poppins', sans-serif`
 
-## Screenshot
-![Brain Blast Quiz Screenshot](assets/brain-blast.png)
 
 ![Brain Blast Quiz Screenshot Limehouse test](assets/limehouse-test.png)
 ## Key Features
