@@ -101,6 +101,14 @@ class QuizGame {
         const category = event.target.dataset.category;
         this.lastPlayedCategoryId = category; // Track the last played category
         this.questions = await this.fetchQuestions(category);
+
+        // Defensive check: If no questions, show error and reset
+        if (!this.questions || this.questions.length === 0) {
+            alert("Sorry, no questions available for this category. Please try another one.");
+            this.resetGame();
+            return;
+        }
+
         this.currentQuestion = 0;
         this.score = 0;
         document.getElementById('score').textContent = '0';
@@ -117,18 +125,49 @@ class QuizGame {
 
     async fetchQuestions(category) {
         try {
+            // Map your category IDs to The Trivia API categories
+            const categoryMap = {
+                9: "general_knowledge",
+                17: "science",
+                21: "sport_and_leisure",
+                22: "geography",
+                11: "film_and_tv",
+                12: "music",
+                23: "history",
+                24: "society_and_culture",
+                27: "animals",
+                28: "vehicles",
+                15: "video_games",
+                10: "arts_and_literature",
+                25: "arts_and_literature",
+                26: "celebrities",
+                29: "arts_and_literature",
+                20: "mythology",
+                32: "arts_and_literature",
+                19: "science",
+                18: "science",
+                30: "science",
+                31: "arts_and_literature",
+                14: "film_and_tv",
+                16: "arts_and_literature",
+                13: "arts_and_literature"
+            };
+            const apiCategory = categoryMap[category] || "general_knowledge";
             const response = await fetch(
-                `https://opentdb.com/api.php?amount=10&category=${category}&type=multiple`
+                `https://the-trivia-api.com/api/questions?categories=${apiCategory}&limit=10&difficulty=medium`
             );
             const data = await response.json();
-            return data.results.map(q => ({
+            if (!data || data.length === 0) {
+                return [];
+            }
+            return data.map(q => ({
                 question: q.question,
-                correct: q.correct_answer,
-                options: [...q.incorrect_answers, q.correct_answer]
-                    .sort(() => Math.random() - 0.5)
+                correct: q.correctAnswer,
+                options: [...q.incorrectAnswers, q.correctAnswer].sort(() => Math.random() - 0.5)
             }));
         } catch (error) {
             console.error('Error fetching questions:', error);
+            return [];
         }
     }
 
@@ -244,13 +283,13 @@ class QuizGame {
         if (this.lastPlayedCategoryId && this.categories[this.lastPlayedCategoryId]) {
             // Pick a random new category from the pool that isn't already in use
             let available = this.extraCategories.filter(
-                cat => !(cat.id in this.categories)
+                cat => !(String(cat.id) in this.categories)
             );
             if (available.length > 0) {
                 let newCat = available[Math.floor(Math.random() * available.length)];
-                // Replace the last played category with the new one
+                // Replace the last played category with the new one (ensure string key)
                 delete this.categories[this.lastPlayedCategoryId];
-                this.categories[newCat.id] = newCat.name;
+                this.categories[String(newCat.id)] = newCat.name;
             }
         }
         // Regenerate the categories grid for next time
