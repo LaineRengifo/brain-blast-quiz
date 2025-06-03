@@ -1,13 +1,16 @@
 # 🧠 Brain Blast Quiz
 
-Brain Blast Quiz is a vibrant, interactive web quiz app that challenges users with fun questions across multiple categories. Designed for learning and entertainment, it features a modern UI, dark/light theme toggle, and smooth animations. Built as a JavaScript project to demonstrate dynamic DOM manipulation, API integration, and responsive design.
+Brain Blast Quiz is a vibrant, interactive web quiz app that challenges users with fun questions across multiple categories. Designed for learning and entertainment, it features a modern UI, dark/light theme toggle, smooth animations, a timer, and dynamic category swapping. Built as a JavaScript project to demonstrate dynamic DOM manipulation, API integration, and responsive design.
+
+---
+
+![Brain Blast Quiz Screenshot](assets/screenshot.png)
 
 ---
 
 ## 🔗 Live Demo
 
-<!-- Replace with your live link if deployed -->
-<!-- [Try Brain Blast Quiz](https://yourusername.github.io/brain-blast-quiz/) -->
+[Try Brain Blast Quiz](https://lainerengifo.github.io/brain-blast-quiz/)
 
 ---
 
@@ -29,7 +32,7 @@ Brain Blast Quiz is a vibrant, interactive web quiz app that challenges users wi
 
 ## 📌 Project Overview
 
-**Brain Blast Quiz** is a single-page web app that lets users test their knowledge in categories like General Knowledge, Science & Nature, Sports, and Geography. Questions are fetched live from the Open Trivia Database API, ensuring a fresh experience every time.
+**Brain Blast Quiz** is a single-page web app that lets users test their knowledge in categories like General Knowledge, Science & Nature, Sports, and Geography. Questions are fetched live from the Open Trivia Database API, ensuring a fresh experience every time. After each quiz, the played category is swapped out for a new one from a pool of extra categories, keeping the game fresh and surprising.
 
 ---
 
@@ -38,6 +41,8 @@ Brain Blast Quiz is a vibrant, interactive web quiz app that challenges users wi
 - Clean, modern interface with responsive layout
 - Dark and light theme toggle for comfortable viewing
 - Animated transitions for feedback and engagement
+- Custom modal dialogs for end-of-game and "How to Play" instructions
+- Colorful feedback for correct (green) and wrong (red) answers
 
 ---
 
@@ -50,6 +55,10 @@ As a user, I want to:
 - ✅ Switch between dark and light themes
 - ✅ Return to category selection at any time
 - ✅ Play on mobile, tablet, or desktop
+- ✅ See a timer and my progress (e.g., "Question 3 of 10")
+- ✅ See a celebratory modal when I finish the quiz
+- ✅ Learn how to play via a "How to Play" button
+- ✅ See new categories appear after finishing a quiz
 
 ---
 
@@ -63,6 +72,8 @@ As a user, I want to:
 | Light Background| `#f5f6fa` → `#e9ecef` (gradient)|
 | Text (Dark)     | `#FFFFFF`                      |
 | Text (Light)    | `#22223B`                      |
+| Correct Answer  | `#2ECC71` (Green)              |
+| Wrong Answer    | `#E74C3C` (Red)                |
 | Font            | `'Poppins', sans-serif`        |
 
 ---
@@ -71,11 +82,16 @@ As a user, I want to:
 
 - Dynamic category and question generation via JavaScript
 - Fetches questions from the Open Trivia Database API
-- Score tracking and progress bar
+- Score tracking and animated progress bar
+- Timer showing elapsed time for each quiz
+- "Question X of Y" progress indicator
 - Dark/light theme toggle
 - Responsive design for all devices
 - Back button to return to category selection
-- Animated feedback for correct/wrong answers
+- Animated feedback for correct/wrong answers (green/red)
+- Custom modal for end-of-game celebration
+- "How to Play" button with colorful, clear instructions
+- After each quiz, the played category is replaced with a new random category from a large pool
 
 ---
 
@@ -83,7 +99,7 @@ As a user, I want to:
 
 - **HTML5**: Semantic structure
 - **CSS3**: Styling, layout, responsive design, and themes
-- **JavaScript (ES6+)**: Game logic, DOM manipulation, API integration
+- **JavaScript (ES8+)**: Game logic, DOM manipulation, API integration
 - **Open Trivia Database API**: Live quiz questions
 
 ---
@@ -92,8 +108,20 @@ As a user, I want to:
 
 - Tested on Chrome, Firefox, and mobile browsers
 - Responsive layout verified on various screen sizes
-- Validated with W3C HTML and CSS validators
+- [HTML validated with W3C Validator](https://validator.w3.org/)
+- [CSS validated with W3C CSS Validator](https://jigsaw.w3.org/css-validator/) 
+
 - Manual testing for all user stories and features
+
+### 📸 Screenshots
+
+- [Responsive Screenshot](assets/screenshot-responsive.png)
+- [Dark Theme Screenshot](assets/screenshot-dark.png)
+- [Light Theme Screenshot](assets/screenshot-light.png)
+- [How to Play Modal](assets/screenshot-how-to-play.png)
+- [HTML Validation Result](assets/html-validation.png)
+- [CSS Validation Result](assets/css-validation.png)
+- [Limehouse tested](assets/screenshot-limehouse.png)
 
 ---
 
@@ -106,16 +134,18 @@ As a user, I want to:
 
 ## 🔮 Future Features
 
-- 🚀 Add more categories and question types
+- 🚀 Add more question types (true/false, fill-in-the-blank)
 - 🚀 High score leaderboard
 - 🚀 Sound effects and more animations
 - 🚀 Persistent theme and score memory
+- 🚀 User-selectable number of questions per quiz
 
 ---
 
 ## 🐞 Known Bugs
 
 - ❌ Some special characters in questions may not render perfectly (API issue)
+- ❌ If the API is unreachable, the quiz cannot start
 
 ---
 
