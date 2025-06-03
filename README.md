@@ -4,7 +4,7 @@ Brain Blast Quiz is a vibrant, interactive web quiz app that challenges users wi
 
 ---
 
-![Brain Blast Quiz Screenshot](assets/screenshot.png)
+![Brain Blast Quiz Screenshot](assets/Screenshot.png)
 
 ---
 
