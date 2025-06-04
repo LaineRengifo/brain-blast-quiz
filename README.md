@@ -32,7 +32,7 @@ Brain Blast Quiz is a vibrant, interactive web quiz app that challenges users wi
 
 ## 📌 Project Overview
 
-**Brain Blast Quiz** is a single-page web app that lets users test their knowledge in categories like General Knowledge, Science & Nature, Sports, and Geography. Questions are fetched live from the Open Trivia Database API, ensuring a fresh experience every time. After each quiz, the played category is swapped out for a new one from a pool of extra categories, keeping the game fresh and surprising.
+**Brain Blast Quiz** is a single-page web app that lets users test their knowledge in categories like General Knowledge, Science & Nature, Sports, and Geography. Questions are fetched live from [the-trivia-api.com](https://the-trivia-api.com/), ensuring a fresh experience every time. After each quiz, the played category is swapped out for a new one from a pool of extra categories, keeping the game fresh and surprising.
 
 ---
 
@@ -81,7 +81,7 @@ As a user, I want to:
 ## 🚀 Features
 
 - Dynamic category and question generation via JavaScript
-- Fetches questions from the Open Trivia Database API
+- Fetches questions from [the-trivia-api.com](https://the-trivia-api.com/)
 - Score tracking and animated progress bar
 - Timer showing elapsed time for each quiz
 - "Question X of Y" progress indicator
@@ -100,7 +100,7 @@ As a user, I want to:
 - **HTML5**: Semantic structure
 - **CSS3**: Styling, layout, responsive design, and themes
 - **JavaScript (ES8+)**: Game logic, DOM manipulation, API integration
-- **Open Trivia Database API**: Live quiz questions
+- **[the-trivia-api.com](https://the-trivia-api.com/)**: Live quiz questions
 
 ---
 
@@ -110,7 +110,6 @@ As a user, I want to:
 - Responsive layout verified on various screen sizes
 - [HTML validated with W3C Validator](https://validator.w3.org/)
 - [CSS validated with W3C CSS Validator](https://jigsaw.w3.org/css-validator/) 
-
 - Manual testing for all user stories and features
 
 ### 📸 Screenshots
@@ -121,7 +120,6 @@ As a user, I want to:
 - [How to Play Modal](assets/screenshot-how-to-play.png)
 - [HTML Validation Result](assets/html-validation.png)
 - [CSS Validation Result](assets/css-validation.png)
-- [Limehouse tested](assets/screenshot-limehouse.png)
 
 ---
 
@@ -151,6 +149,6 @@ As a user, I want to:
 
 ## 📜 Citation
 
-- [Open Trivia Database API](https://opentdb.com/)
+- [the-trivia-api.com](https://the-trivia-api.com/)
 - [Poppins Font - Google Fonts](https://fonts.google.com/specimen/Poppins)
 - Icons and favicon from [Icons8](https://icons8.com/)

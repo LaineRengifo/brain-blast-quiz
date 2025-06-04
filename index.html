@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brain Blast Quiz</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <button id="toggleTheme" style="position:fixed;top:20px;left:20px;z-index:100;">🌙</button>
+    <button id="toggleTheme" aria-label="Toggle theme" style="position:fixed;top:20px;left:20px;z-index:100;">🌙</button>
     <div class="container">
         <div class="score-board">
             <span>Score: <span id="score">0</span></span>
@@ -27,7 +28,7 @@
         </div>
 
         <div class="question-container" id="questionContainer">
-            <button id="backBtn" style="display:none;margin-bottom:1rem;">⬅ Back</button>
+            <button id="backBtn" aria-label="Back" style="display:none;margin-bottom:1rem;">⬅ Back</button>
             <div id="questionText"></div>
             <div class="option-grid" id="optionGrid"></div>
         </div>
@@ -36,11 +37,11 @@
             <div class="modal-content">
                 <h2>🎉 Congratulations! 🎉</h2>
                 <p id="finalMessage"></p>
-                <button id="closeModalBtn">Play Again</button>
+                <button id="closeModalBtn" aria-label="Play Again">Play Again</button>
             </div>
         </div>
 
-        <button id="howToPlayBtn" class="info-btn">How to Play</button>
+        <button id="howToPlayBtn" aria-label="How to Play" class="info-btn">How to Play</button>
         <div id="howToPlayModal" class="modal" style="display:none;">
             <div class="modal-content">
                 <h2>How to Play</h2>
@@ -56,7 +57,7 @@
                     <li>🌙/🌞 Switch between dark and light themes anytime.</li>
                     <li>⬅️ Click "Back" to return to category selection.</li>
                 </ul>
-                <button id="closeHowToPlayBtn">Close</button>
+                <button id="closeHowToPlayBtn" aria-label="Close How to Play">Close</button>
             </div>
         </div>
     </div>

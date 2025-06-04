@@ -1,3 +1,5 @@
+// Quiz Game JavaScript Code
+// This code implements a quiz game with categories, questions, scoring, and a timer.
 class QuizGame {
     constructor() {
         this.score = 0;
@@ -9,7 +11,6 @@ class QuizGame {
             21: 'Sports',
             22: 'Geography'
         };
-        // Pool of extra categories (categoryId: name)
         this.extraCategories = [
             { id: 11, name: 'Films' },
             { id: 12, name: 'Music' },
@@ -25,16 +26,12 @@ class QuizGame {
             { id: 20, name: 'Mythology' },
             { id: 32, name: 'Cartoon & Animations' },
             { id: 19, name: 'Mathematics' },
-            { id: 22, name: 'Geography' }, // in case allow repeats
             { id: 18, name: 'Computers' },
             { id: 30, name: 'Gadgets' },
             { id: 31, name: 'Anime & Manga' },
             { id: 14, name: 'Television' },
             { id: 16, name: 'Board Games' },
-            { id: 13, name: 'Musicals & Theatres' },
-            { id: 21, name: 'Sports' }, // in case allow repeats
-            { id: 17, name: 'Science & Nature' }, // in case allow repeats
-            { id: 9, name: 'General Knowledge' } // in case allow repeats
+            { id: 13, name: 'Musicals & Theatres' }
         ];
         this.lastPlayedCategoryId = null;
         this.timerInterval = null;
@@ -99,10 +96,9 @@ class QuizGame {
 
     async startGame(event) {
         const category = event.target.dataset.category;
-        this.lastPlayedCategoryId = category; // Track the last played category
+        this.lastPlayedCategoryId = category;
         this.questions = await this.fetchQuestions(category);
 
-        // Defensive check: If no questions, show error and reset
         if (!this.questions || this.questions.length === 0) {
             alert("Sorry, no questions available for this category. Please try another one.");
             this.resetGame();
@@ -116,7 +112,6 @@ class QuizGame {
         this.displayQuestion();
         this.updateProgress();
         document.getElementById('backBtn').style.display = 'inline-block';
-        // Start timer
         this.startTime = Date.now();
         this.updateTimer();
         if (this.timerInterval) clearInterval(this.timerInterval);
@@ -125,7 +120,6 @@ class QuizGame {
 
     async fetchQuestions(category) {
         try {
-            // Map your category IDs to The Trivia API categories
             const categoryMap = {
                 9: "general_knowledge",
                 17: "science",
@@ -175,7 +169,6 @@ class QuizGame {
         const currentQ = this.questions[this.currentQuestion];
         document.getElementById('questionText').innerHTML = this.decodeHTML(currentQ.question);
 
-        // Update question counter
         document.getElementById('questionCounter').textContent =
             `Question ${this.currentQuestion + 1} of ${this.questions.length}`;
 
@@ -240,17 +233,16 @@ class QuizGame {
         document.getElementById('questionContainer').style.display = 'block';
         document.getElementById('categoryGrid').style.display = 'none';
         document.getElementById('backBtn').style.display = 'inline-block';
-        document.getElementById('howToPlayBtn').style.display = 'none'; // Hide How to Play button
+        document.getElementById('howToPlayBtn').style.display = 'none';
     }
 
     hideQuestionContainer() {
         document.getElementById('questionContainer').style.display = 'none';
         document.getElementById('backBtn').style.display = 'none';
-        document.getElementById('howToPlayBtn').style.display = 'inline-block'; // Show How to Play button
+        document.getElementById('howToPlayBtn').style.display = 'inline-block';
     }
 
     endGame() {
-        // Stop timer
         this.endTime = Date.now();
         clearInterval(this.timerInterval);
         this.updateTimer();
@@ -258,41 +250,33 @@ class QuizGame {
         const min = Math.floor(elapsed / 60);
         const sec = elapsed % 60;
 
-        // Set modal message
         var finalMessage = document.getElementById('finalMessage');
         finalMessage.innerHTML =
             `<strong>Your final score:</strong> ${this.score}<br>
             <strong>Total time:</strong> ${min}:${sec < 10 ? '0' : ''}${sec}<br><br>
             <span style="font-size:1.2em;">Great job!</span>`;
 
-        // Show modal
         document.getElementById('endModal').style.display = 'flex';
 
-        // Handle close button
         document.getElementById('closeModalBtn').onclick = () => {
             document.getElementById('endModal').style.display = 'none';
             this.resetGame();
         };
 
-        // Replace the just-played category with a new one from the pool
         this.replaceCategory();
     }
 
     replaceCategory() {
-        // Remove the last played category from the main categories
         if (this.lastPlayedCategoryId && this.categories[this.lastPlayedCategoryId]) {
-            // Pick a random new category from the pool that isn't already in use
             let available = this.extraCategories.filter(
                 cat => !(String(cat.id) in this.categories)
             );
             if (available.length > 0) {
                 let newCat = available[Math.floor(Math.random() * available.length)];
-                // Replace the last played category with the new one (ensure string key)
                 delete this.categories[this.lastPlayedCategoryId];
                 this.categories[String(newCat.id)] = newCat.name;
             }
         }
-        // Regenerate the categories grid for next time
         this.generateCategories();
     }
 
